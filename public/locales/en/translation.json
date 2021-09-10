@@ -1,0 +1,12 @@
+{
+    "title": "Welcome to Dashboard",
+    "language":"Languages",
+    "content": {
+      "description": "Earth is the third planet from the Sun",
+      "source": "Source: "
+    },
+    "loadingUser": {
+      "loading": "Loading...",
+      "signin": "Sign-In"  
+    }
+}

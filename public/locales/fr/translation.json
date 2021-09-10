@@ -1,0 +1,12 @@
+{
+    "title": "Bienvenue dans votre tableau de bord",
+    "language":"Langues",
+    "content": {
+      "description": "La Terre est la troisième planète du Soleil",
+      "source": "La source: "
+    },
+    "loadingUser": {
+      "loading": "Chargement...",
+      "signin": "Se connecter"  
+    }
+}
