@@ -104,7 +104,7 @@ export async function signUpWithEmailAndPassword({ email, password, name }) {
             displayName: name,
           });
         }
-
+        addUserToCollection(person);
         resolve(person);
       })
       .catch((err) => {
@@ -165,7 +165,7 @@ export async function sendSignInEmailLink(email) {
     }
     const url = window.location.href;
     const dynamicUrl = url.slice(0, url.lastIndexOf("/"));
-    const URL = `${dynamicUrl}/sign-in-with-email-link`;
+    const URL = `${dynamicUrl}/`;
     console.log({ URL });
     const actionCodeSettings = {
       url: URL,
@@ -279,13 +279,35 @@ export const useGetCurrentUser = () => {
   return user;
 };
 
-//Add loggedIn user to `users` collection
-export async function addUserToCollection(user) {
+//Add logged In user to `users` collection
+async function addUser(user) {
   const db = firebase.firestore();
   const users = db.collection("users");
   try {
     await users.add(user);
   } catch (error) {
-    console.log("User not added to collection");
+    console.log("User not added to collection due to: " + error);
+  }
+
+};
+export async function addUserToCollection(user) {
+  const db = firebase.firestore();
+  const users = db.collection("users");
+  //verify if the user exists already in collection, otherwise, add
+  try{
+    await users
+    .where("email", "==", user.email)
+    .get()
+    .then((doc) => {
+       if(!doc.empty) {
+         //console.log("User exists");
+       }
+       else {
+         //console.log("User added to collection");
+        addUser(user);
+       }
+    });
+  } catch (error) {
+    console.log("An error occured due to: " + error);
   }
 }

@@ -13,6 +13,7 @@ import { auth } from "../firebase";
 import { useHistory } from "react-router-dom";
 import { Layout, Radio } from "antd";
 import { useTranslation } from "react-i18next";
+
 //to store chosen language in cookies
 import Cookies from "js-cookie";
 import InstallPWA from "./InstallPWA";
@@ -101,7 +102,6 @@ export default function Header() {
           </Radio.Group>
           </Menu>
           {/*end lang session */}
-
 
           <IconButton
             edge="end"

@@ -13,7 +13,7 @@ import Container from "@material-ui/core/Container";
 import Copyright from "../../components/Copyright";
 import { Link, useHistory } from "react-router-dom";
 import { DispatchUserContext, UserContext } from "../../state/contexts/contexts";
-import { signUpWithEmailAndPassword } from "../../auth";
+import { signUpWithEmailAndPassword, addUserToCollection } from "../../auth";
 import {
   userLoginRequest,
   userLoginFailure,
@@ -89,7 +89,7 @@ export default function SignUp() {
       signUpWithEmailAndPassword(user)
         .then((user) => {
           dispatch(userLoginSuccess(user));
-          history.push("/dashboard");
+          history.push("/");
         })
         .catch((err) => dispatch(userLoginFailure(err)));
     }

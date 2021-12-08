@@ -170,6 +170,7 @@ export default function SignIn() {
         </form>
       </div>
       <SocialLogin />
+      {/*
       <Button
         fullWidth
         variant="contained"
@@ -179,6 +180,7 @@ export default function SignIn() {
       >
         Send Sign In Email Link
       </Button>
+      */}
       <Box mt={8}>
         <Copyright />
       </Box>

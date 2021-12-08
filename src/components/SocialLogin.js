@@ -34,7 +34,7 @@ function SocialLogin() {
     loginWithProvider(providerId)
       .then((user) => {
         dispatch(userLoginSuccess(user));
-        history.push("/dashboard");
+        history.push("/");
       })
       .catch((err) => dispatch(userLoginFailure(err)));
   };
@@ -44,6 +44,7 @@ function SocialLogin() {
       <Typography component="h1" variant="body1">
         OR
       </Typography>
+      {/*
       <Button
         fullWidth
         variant="contained"
@@ -55,6 +56,7 @@ function SocialLogin() {
       >
         Sign in with Facebook
       </Button>
+      */}
       <Button
         fullWidth
         variant="contained"

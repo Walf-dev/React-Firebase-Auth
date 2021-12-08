@@ -26,7 +26,9 @@ const reducer = (state = INITIAL_STATE, { type, payload }) => {
       return {
         ...state,
         isLoading: false,
+        error: null,
         user: null,
+        authenticated: false,
       };
     case "GET_CURRENT_USER":
       return {

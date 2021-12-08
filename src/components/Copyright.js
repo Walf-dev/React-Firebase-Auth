@@ -7,10 +7,10 @@ export default function Copyright() {
       {"Copyright © "}
       <Link
         color="inherit"
-        href="https://github.com/ooanishoo/react-firebase-auth"
+        href="https://github.com/Walf-dev/sweetTasks"
         target="_blank"
       >
-        React Firebase Authentication
+        sweetTasks
       </Link>{" "}
       {new Date().getFullYear()}
       {"."}

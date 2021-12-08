@@ -6,11 +6,10 @@ import LoadingUser from "../components/LoadingUser";
 
 const PrivateRoute = ({ component: RouteComponent, ...rest }) => {
   const user = useGetCurrentUser();
-  console.log(user);
   if (user === null)
     return (
       <div>
-        <LoadingUser/>
+        Loading...
       </div>
     );
   return (
