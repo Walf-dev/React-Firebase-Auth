@@ -22,7 +22,7 @@ A react app using hooks integrated with firebase for authenticating users. The a
 Download or clone this repo by using the link below:
 
 ```
-git clone https://github.com/ooanishoo/react-firebase-auth
+git clone https://github.com/walf-dev/react-firebase-auth
 ```
 
 **Step 2:**
